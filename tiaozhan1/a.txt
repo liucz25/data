@@ -1,0 +1,12 @@
+dsafhkasjdhfkasjjhfkjashfkjahkjfdashkf
+json [{:}]
+dict in list
+
+data=[{:}]
+
+user_id
+data[i]['user_id']
+
+fobj=open(filename)
+
+data=fobj.read()
