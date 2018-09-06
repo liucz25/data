@@ -3,7 +3,7 @@
 from matplotlib import pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import Perceptron
+from sklearn.svm import SVC
 
 data=pd.read_csv("two_class_data.csv",header=0)
 
@@ -16,7 +16,7 @@ x_train,x_test,y_train,y_test = train_test_split(feature,target,test_size=0.3,ra
 #print(y_train.shape)
 #print(y_test.shape)
 plt.scatter(x_train[:,0],x_train[:,1],alpha=0.3)
-model=Perceptron()
+model=SVC()
 
 model.fit(x_train,y_train)
 
