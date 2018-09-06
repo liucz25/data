@@ -1,0 +1,8 @@
+不完美，json 文件分割太原始，应该有办法
+
+wget http://labfile.oss.aliyuncs.com/courses/764/user_study.json
+
+改善方法很简单，json。load （fileobj）
+直接传open后的文件对象，不用read（）
+
+简单高效

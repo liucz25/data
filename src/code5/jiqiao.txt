@@ -1,0 +1,46 @@
+from demo1 import demo
+
+https://blog.csdn.net/mingyang_wang/article/details/79152654
+
+Python中py文件引用另一个py文件变量
+2018年01月24日 16:41:03 阅读数：7081
+版权声明：本文为博主原创文章，未经博主允许不得转载。	https://blog.csdn.net/mingyang_wang/article/details/79152654
+最近自己初学Python，在编程是遇到一个问题就是，怎样在一个py文件中使用另一个py文件中变量，问题如下： 
+demo1代码
+
+import requests
+r = requests.get("http://www.baidu.com")
+r.encoding = r.apparent_encoding
+demo = r.text
+demo
+1
+2
+3
+4
+5
+6
+beauful1代码：
+
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(demo,"html.parser")
+soup.prettify()
+print(soup.prettify)
+1
+2
+3
+4
+5
+在demo1中的demo变量存储了百度首页的信息，想在beauful1文件中直接使用，开始时按照其他教程将demo在demo1中定义成全局变量等等，但是感觉特别麻烦，后来查阅资料，发现可以将demo1文件像第三方库一样直接引入，方式如下：
+
+from demo1 import demo
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(demo,"html.parser")
+soup.prettify()
+print(soup.prettify)
+1
+2
+3
+4
+5
+6
+如果直接将demo1全部引入“import demo1”，程序还是会报错，所以就是使用哪个变量就从原来的文件中引入即可。
