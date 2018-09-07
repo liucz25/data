@@ -39,9 +39,9 @@ z0=z0.reshape(xx.shape)
 z1=z1.reshape(xx.shape)
 z2=z2.reshape(xx.shape)
 
-plt.contourf(xx,yy,z0,camp=cm0,alpha=.9)
-plt.contourf(xx,yy,z1,camp=cm1,alpha=.5)
-plt.contourf(xx,yy,z2,camp=cm2,alpha=.4)
+plt.contourf(xx,yy,z0,cmap=cm0,alpha=.9)
+plt.contourf(xx,yy,z1,cmap=cm1,alpha=.5)
+plt.contourf(xx,yy,z2,cmap=cm2,alpha=.4)
 
 plt.scatter(x_train[:,0],x_train[:,1],c=y_train,cmap=cm_color)
 plt.scatter(x_test[:,0],x_test[:,1],c=y_test,cmap=cm_color,edgecolors='black')
