@@ -1,0 +1,8 @@
+history -> h.txt
+history > h.txt
+history
+ls
+history > ./h.txt
+ls
+history > /home/h.txt
+history -f h.txt
