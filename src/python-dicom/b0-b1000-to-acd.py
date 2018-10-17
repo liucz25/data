@@ -6,6 +6,7 @@ import math
 import matplotlib.pyplot as plt 
 
 
+plt.cm 
 
 ds0=pydicom.read_file('b0.dcm')  
 ds1=pydicom.read_file('b1000.dcm')
